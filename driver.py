@@ -1,12 +1,8 @@
-# remeber to import the trip class here
+# remeber to import the Trip class here
+# remeber to import the Passenger class here
 
 class Driver:
 
-    def __init__(self, name):
-        self.name = name
-
-    def my_trips(self):
-        pass
-
-    def my_trip_summaries(self):
-        pass
+    def __init__(self, name, driving_style):
+        self._name = name
+        self._driving_style = driving_style
