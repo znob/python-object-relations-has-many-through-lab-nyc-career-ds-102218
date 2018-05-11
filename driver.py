@@ -1,5 +1,5 @@
-# remeber to import the Trip class here
-# remeber to import the Passenger class here
+# remeber to import the Query class here
+from query import Query
 
 class Driver:
 
@@ -7,11 +7,35 @@ class Driver:
         self._name = name
         self._driving_style = driving_style
 
-    def find_my_trips(arg):
-        pass
+    def name():
+        doc = "The name property."
+        def fget(self):
+            return self._name
+        def fset(self, value):
+            self._name = value
+        def fdel(self):
+            del self._name
+        return locals()
+    name = property(**name())
 
-    def find_my_passengers(arg):
-        pass
+    def driving_style():
+        doc = "The driving_style property."
+        def fget(self):
+            return self._driving_style
+        def fset(self, value):
+            self._driving_style = value
+        def fdel(self):
+            del self._driving_style
+        return locals()
+    driving_style = property(**driving_style())
 
-    def trip_count(arg):
-        pass
+    def trips(self):
+        trips = Query.get_trips(self)
+        return trips
+
+    def passengers(self):
+        passengers = Query.get_attributes(self.trips(), "passenger")
+        return passengers
+
+    def trip_count(self):
+        return len(self.trips())
