@@ -36,10 +36,10 @@ katie = Passenger("Katie", 20)
 ```python
 from trip import Trip
 # create trip instances here using the above passenger and driver instance objects
-trip_one = Trip(daniel, jake)
-trip_two = Trip(alice, katie)
-trip_three = Trip(alice, jake)
-trip_four = Trip(jeff, anna)
+trip_one = None
+trip_two = None
+trip_three = None
+trip_four = None
 ```
 
 ## Operating On Has Many Through Relationships
@@ -135,11 +135,6 @@ jam = Genre("Jam")
 from song import Song
 # create song instances and associate them with artists and genres from above 
 # you can make up the songs if you'd like
-
-jam = Song("JAM!", lcd_soundsystem, jam)
-fire = Song("Fire!", lcd_soundsystem, funk)
-singysing = Song("SingySing", lady_gaga, pop)
-singyduet = Song("SingyDuet", lady_gaga, folk)
 ```
 
 
